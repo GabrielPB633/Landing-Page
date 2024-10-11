@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --black: #121212;
+  --blue: #05aff2;
+  --Purple: #5865f2;
+  --white: #f4f6fa;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--black);
+}
+
+.logo svg {
+  width: 20vw;
+  height: auto;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px;
+}
+
+.navigation ul li a {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.nav-item {
+  white-space: nowrap;
+}
+
+.navigation ul li a:hover {
+  /* Muda a Cor das letras navegação para Purple ao passar mouse em cima */
+  color: var(--Purple);
+}
+
+.button-discord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 3rem;
+  gap: 2px;
+  background-color: var(--Purple);
+  color: var(--white);
+  fill: var(--white);
+  border-color: var(--white);
+}
+
+.button-discord:hover {
+  /* Inverte as cores do botão */
+  background-color: var(--white);
+  color: var(--Purple);
+  fill: var(--Purple);
+  transition: 0.5s;
+}
+
+.button-text {
+  font-size: 18px;
+}
+
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+.menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--white);
+  margin: 5px auto;
+  transition: 0.3s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d2d33;
+  width: 100%;
+  padding-left: 64px;
+  gap: 40px;
+}
+
+.button-main-page {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.button-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vh;
+  height: 5vh;
+  border-radius: 3rem;
+  background-color: var(--Purple);
+  color: var(--white);
+  fill: var(--white);
+  border-color: var(--white);
+  font-size: 18px;
+}
+
+.button-1:hover {
+  background-color: var(--white);
+  color: var(--Purple);
+  fill: var(--Purple);
+  transition: 0.5s;
+}
+
+.button-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vh;
+  height: 5vh;
+  border-radius: 3rem;
+  gap: 2px;
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--white);
+  font-size: 18px;
+}
+
+.button-2:hover {
+  background-color: var(--blue);
+  transition: 0.5s;
+}
+
+.main-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18vh;
+}
+.main-2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 80px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.main-title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+/* Borda animada RGB */
+.main-title-1 {
+  color: var(--blue);
+  position: relative;
+  z-index: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.main-title-1::before,
+.main-title-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.5vh solid transparent;
+  border-image: linear-gradient(
+    45deg,
+    #ffff00,
+    #00ff00,
+    #0099ff,
+    #001aff,
+    #200fff,
+    #ff0055,
+    #ff0000
+  );
+  border-image-slice: 1;
+  animation: AnimationText 3s infinite linear;
+}
+
+.main-title-1::after {
+  filter: blur(4px); /* Aplica o blur na borda */
+}
+
+@keyframes AnimationText {
+  0% {
+    border-image-source: linear-gradient(
+      45deg,
+      #ffff00,
+      #00ff00,
+      #0099ff,
+      #001aff,
+      #200fff,
+      #ff0055,
+      #ff0000
+    );
+  }
+  25% {
+    border-image-source: linear-gradient(
+      90deg,
+      #00ff00,
+      #0099ff,
+      #001aff,
+      #200fff,
+      #ff0055,
+      #ff0000,
+      #ffff00
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      135deg,
+      #0099ff,
+      #001aff,
+      #200fff,
+      #ff0055,
+      #ff0000,
+      #ffff00,
+      #00ff00
+    );
+  }
+  75% {
+    border-image-source: linear-gradient(
+      180deg,
+      #001aff,
+      #200fff,
+      #ff0055,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #0099ff
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      45deg,
+      #ffff00,
+      #00ff00,
+      #0099ff,
+      #001aff,
+      #200fff,
+      #ff0055,
+      #ff0000
+    );
+  }
+}
+
+/* Borda animada em volta das letras em RGB
+
+.main-title-1 {
+    color: var(--black);
+    position: relative;
+    animation: AnimationText 6s infinite;
+}
+
+@keyframes AnimationText {
+    0% {
+        text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #dc4161, 2px -2px 0 #c86496, -2px 2px 0 #b1816e;
+    }
+    25% {
+        text-shadow: 2px 2px 0 #a09650, -2px -2px 0 #65bc7a, 2px -2px 0 #14f0b4, -2px 2px 0 #13e7b7;
+    }
+    50% {
+        text-shadow: 2px 2px 0 #0a74db, -2px -2px 0 #0000ff, 2px -2px 0 #ff0000, -2px 2px 0 #dc4161;
+    }
+    75% {
+        text-shadow: 2px 2px 0 #c86496, -2px -2px 0 #b1816e, 2px -2px 0 #a09650, -2px 2px 0 #65bc7a;
+    }
+    100% {
+        text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #dc4161, 2px -2px 0 #c86496, -2px 2px 0 #b1816e;
+    }
+}
+
+*/
+
+/* ORIGINAL
+
+.main-title-1{
+    color: var(--blue);
+    text-decoration:underline;
+    text-decoration-color: var(--withe);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 10px
+} */
+
+.main-title-2 {
+  color: var(--Purple);
+}
+
+.main-image {
+  /* Regula o tamanho da imagem*/
+  max-width: 40%;
+  height: auto;
+  margin: 0;
+}
+
+.main-text {
+  line-height: 2rem;
+}
+
+.sub-main {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 80px;
+}
+
+.sub-main-itens {
+  /*Configuração de Grid para deixar os itens em 2 colunas com 2 linhas*/
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: left;
+  gap: 10px;
+  height: 40vh;
+  width: 70vh;
+}
+
+.sub-main-itens-2 {
+  display: flex;
+  gap: 20px;
+}
+
+.image-gif {
+  max-width: 10%;
+  height: auto;
+  margin: auto;
+}
+
+.sub-main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 3vh;
+  font-size: 2vh;
+}
+
+.sub-main-title span {
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 3vh;
+}
+
+/* Linha com efeito de transparencia nas pontas separando as seções*/
+.vertical-line {
+  width: 100%;
+  height: 1px;
+  max-width: 1000px;
+  background: linear-gradient(90deg, #2d2d33, #f4f6fa, #2d2d2d);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .navigation ul {
+    align-items: center;
+    padding: 60px;
+  }
+  .menu {
+    display: block;
+  }
+  .menu.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu.ativo .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .button-discord {
+    position: fixed;
+    right: -100%;
+  }
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 110px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: var(--black);
+    transition: 0.3s;
+  }
+
+  .nav-menu.ativo {
+    right: 0;
+    z-index: 1;
+  }
+
+  main {
+    padding: 1rem;
+  }
+  .main-1 {
+    padding-top: 4vh;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .main-2{
+    margin: 0;
+  }
+
+  .main-title-1 {
+    font-size: 2.5rem;
+  }
+  .main-title,
+  .main-title-2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .button-main-page{
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-1, .button-2{
+    width: 15vh;
+  }
+
+  .sub-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-main-itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1vh;
+  }
+
+  .sub-main-title{
+    text-align: center;
+  }
+
+  .sub-main-itens-2{
+    gap:0;
+  }
+
+  .image-gif {
+    max-width: 8%;
+  }
+}
